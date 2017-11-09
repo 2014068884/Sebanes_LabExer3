@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sebanes.sebanes_labexer3.MainActivity2">
+
+    <TextView
+        android:id="@+id/tvFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filename:"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tvFile"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvFilename"
+        android:textSize="12sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFile"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Preference"
+        android:layout_below="@+id/tvData"
+        android:layout_marginTop="40dp"
+        android:onClick="loadSharedPreference"/>
+
+    <Button
+        android:id="@+id/btnIS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Storage"
+        android:layout_below="@+id/btnSP"
+        android:onClick="loadInternalStorage"/>
+
+    <Button
+        android:id="@+id/btnIC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Cache"
+        android:layout_below="@+id/btnIS"
+        android:onClick="loadInternalCache"/>
+
+    <Button
+        android:id="@+id/btnEC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Cache"
+        android:layout_below="@+id/btnIC"
+        android:onClick="loadExternalCache"/>
+
+    <Button
+        android:id="@+id/btnES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Storage"
+        android:layout_below="@+id/btnEC"
+        android:onClick="loadExternalStorage"/>
+
+    <Button
+        android:id="@+id/btnPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Public Storage"
+        android:layout_below="@+id/btnES"
+        android:onClick="loadExternalPubStor"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        android:layout_below="@+id/btnPS"
+        android:onClick="previous"/>
+</RelativeLayout>
